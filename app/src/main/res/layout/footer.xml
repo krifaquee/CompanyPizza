@@ -1,0 +1,113 @@
+<!-- res/layout/footer_layout.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/footerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="#F8F6DC">
+
+    <!-- Левая часть: Все текстовые поля (вертикально) -->
+    <LinearLayout
+        android:id="@+id/footerTextContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvAddressInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Мы находимся по адресу:"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#EF8535"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="г. Минск, ул. Петруся"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Бровки, 30. 9:00-22:00"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Служба обратной связи:"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#EF8535"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="autismfeedback@degenerat.by"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvHotline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Горячая линия:"
+            android:textStyle="bold"
+            android:textColor="#EF8535"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1488"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+    </LinearLayout>
+
+    <!-- Правая часть: Иконки (вертикально или горизонтально) -->
+    <LinearLayout
+        android:id="@+id/footerIconsContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="20dp"
+        android:gravity="right|top">
+
+        <ImageView
+            android:id="@+id/ivTikTok"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/tiktok"
+            android:contentDescription="TikTok"
+            android:layout_marginBottom="8dp"/>
+
+        <ImageView
+            android:id="@+id/ivOk"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ok"
+            android:contentDescription="OK"
+            android:layout_marginBottom="8dp"/>
+
+        <ImageView
+            android:id="@+id/ivFacebook"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/facebook"
+            android:contentDescription="Facebook" />
+    </LinearLayout>
+</LinearLayout>

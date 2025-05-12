@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    tools:ignore="HardcodedText"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Ваш основной контент (то, что было в LinearLayout) -->
+    <LinearLayout
+        android:id="@+id/main_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Шапка -->
+        <include
+            layout="@layout/nav_header_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Центр -->
+        <include
+            layout="@layout/center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Подвал -->
+        <include
+            layout="@layout/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- Кастомное боковое меню -->
+    <LinearLayout
+        android:id="@+id/customDrawer"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:clipToPadding="true"
+        android:background="#EF8535">
+
+        <!-- Верхняя панель: "Меню" + "X" -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/menuTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/menu_title_bg"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginEnd="40dp"
+                android:text="Меню"
+                android:gravity="center"
+                android:textColor="#763C00"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/closeMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:textColor="#763C00"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginRight="8dp"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.example.autismcompany.OutlinedTextView
+                    android:id="@+id/nav_postnoe_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:textStyle="bold"
+                    android:text="Постное меню"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <com.example.autismcompany.OutlinedTextView
+                    android:id="@+id/nav_zavtraki"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="Завтраки"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <com.example.autismcompany.OutlinedTextView
+                    android:id="@+id/nav_supy_hleb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:textStyle="bold"
+                    android:text="Супы/Хлеб"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <com.example.autismcompany.OutlinedTextView
+                    android:id="@+id/nav_deserty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:textStyle="bold"
+                    android:text="Десерты"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <com.example.autismcompany.OutlinedTextView
+                    android:id="@+id/nav_zakuski"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="Закуски"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <com.example.autismcompany.OutlinedTextView
+                    android:id="@+id/nav_salaty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="Салаты"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <com.example.autismcompany.OutlinedTextView
+                    android:id="@+id/nav_piccy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="Пиццы"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <com.example.autismcompany.OutlinedTextView
+                    android:id="@+id/nav_belarus_kitchen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="Белорусская кухня"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <com.example.autismcompany.OutlinedTextView
+                    android:id="@+id/nav_detskoe_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="Детское меню"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <com.example.autismcompany.OutlinedTextView
+                    android:id="@+id/nav_garniry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="Гарниры"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <com.example.autismcompany.OutlinedTextView
+                    android:id="@+id/nav_burgers_sandwiches"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="Бургеры/Сэндвичи"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <com.example.autismcompany.OutlinedTextView
+                    android:id="@+id/nav_kofe_chai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="Кофе/Чай"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <com.example.autismcompany.OutlinedTextView
+                    android:id="@+id/nav_soki_sodovye"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="Соки/Содовые"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <com.example.autismcompany.OutlinedTextView
+                    android:id="@+id/nav_dopolnitelno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="Дополнительно"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+                    <com.example.autismcompany.OutlinedTextView
+                        android:id="@+id/nav_registraciya"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:paddingStart="20dp"
+                        android:text="Регистрация"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <com.example.autismcompany.OutlinedTextView
+                        android:id="@+id/nav_vhod"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="40dp"
+                        android:text="Вход"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

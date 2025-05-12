@@ -1,0 +1,72 @@
+<!-- res/menu/drawer_menu.xml -->
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="HardcodedText" >
+
+    <item
+        android:id="@+id/nav_postnoe_menu"
+        android:title="Постное меню" />
+
+    <item
+        android:id="@+id/nav_zavtraki"
+        android:title="Завтраки" />
+
+    <item
+        android:id="@+id/nav_supy_hleb"
+        android:title="Супы/Хлеб" />
+
+    <item
+        android:id="@+id/nav_deserty"
+        android:title="Десерты" />
+
+    <item
+        android:id="@+id/nav_zakuski"
+        android:title="Закуски" />
+
+    <item
+        android:id="@+id/nav_salaty"
+        android:title="Салаты" />
+
+    <item
+        android:id="@+id/nav_piccy"
+        android:title="Пиццы" />
+
+    <item
+        android:id="@+id/nav_belarus_kitchen"
+        android:title="Белорусская кухня" />
+
+    <item
+        android:id="@+id/nav_detskoe_menu"
+        android:title="Детское меню" />
+
+    <item
+        android:id="@+id/nav_garniry"
+        android:title="Гарниры" />
+
+    <item
+        android:id="@+id/nav_burgers_sandwiches"
+        android:title="Бургеры/Сэндвичи" />
+
+    <item
+        android:id="@+id/nav_kofe_chai"
+        android:title="Кофе/Чай" />
+
+    <item
+        android:id="@+id/nav_soki_sodovye"
+        android:title="Соки/Содовые" />
+
+    <item
+        android:id="@+id/nav_dopolnitelno"
+        android:title="Дополнительно" />
+
+    <!-- Можно добавить разделитель или подменю -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_registraciya"
+            android:title="Регистрация" />
+        <item
+            android:id="@+id/nav_vhod"
+            android:title="Вход" />
+    </group>
+
+</menu>
